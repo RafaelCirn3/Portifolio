@@ -3,7 +3,8 @@
     <div class="page-header animate-fade-in-up">
       <h1>Contato</h1>
       <div class="header-line"></div>
-      <p class="header-subtitle">Se você precisa automatizar processos, estruturar dados ou desenvolver um sistema escalável, podemos conversar.</p>
+      <p class="header-subtitle">Se você precisa automatizar processos, estruturar dados ou desenvolver um sistema
+        escalável, podemos conversar.</p>
     </div>
 
     <div class="contato-content">
@@ -17,13 +18,13 @@
         <div class="info-card">
           <div class="info-icon">📱</div>
           <h3>Telefone</h3>
-          <a href="tel:+5511999999999">+55 (11) 99999-9999</a>
+          <a href="tel:+5583991441464">+55 (83) 99144-1464</a>
         </div>
 
         <div class="info-card">
           <div class="info-icon">📍</div>
           <h3>Localização</h3>
-          <p>São Paulo, SP - Brasil</p>
+          <p>João Pessoa, PB - Brasil</p>
         </div>
 
         <div class="social-links">
@@ -31,7 +32,6 @@
           <div class="socials">
             <a href="https://github.com/RafaelCirn3" target="_blank" rel="noopener" class="social-btn">GitHub</a>
             <a href="https://linkedin.com" target="_blank" rel="noopener" class="social-btn">LinkedIn</a>
-            <a href="https://twitter.com" target="_blank" rel="noopener" class="social-btn">Twitter</a>
           </div>
         </div>
       </div>
@@ -39,49 +39,26 @@
       <form class="contato-form animate-slide-in-right" (ngSubmit)="onSubmit()">
         <div class="form-group">
           <label for="name">Nome</label>
-          <input 
-            id="name" 
-            type="text" 
-            placeholder="Seu nome completo"
-            [(ngModel)]="formData.name"
-            name="name"
-            required
-          />
+          <input id="name" type="text" placeholder="Seu nome completo" [(ngModel)]="formData.name" name="name"
+            required />
         </div>
 
         <div class="form-group">
           <label for="email">Email</label>
-          <input 
-            id="email" 
-            type="email" 
-            placeholder="seu@email.com"
-            [(ngModel)]="formData.email"
-            name="email"
-            required
-          />
+          <input id="email" type="email" placeholder="seu@email.com" [(ngModel)]="formData.email" name="email"
+            required />
         </div>
 
         <div class="form-group">
           <label for="subject">Assunto</label>
-          <input 
-            id="subject" 
-            type="text" 
-            placeholder="Assunto da mensagem"
-            [(ngModel)]="formData.subject"
-            name="subject"
-          />
+          <input id="subject" type="text" placeholder="Assunto da mensagem" [(ngModel)]="formData.subject"
+            name="subject" />
         </div>
 
         <div class="form-group">
           <label for="message">Mensagem</label>
-          <textarea 
-            id="message" 
-            placeholder="Sua mensagem aqui..."
-            rows="6"
-            [(ngModel)]="formData.message"
-            name="message"
-            required
-          ></textarea>
+          <textarea id="message" placeholder="Sua mensagem aqui..." rows="6" [(ngModel)]="formData.message"
+            name="message" required></textarea>
         </div>
 
         <button type="submit" class="submit-btn" [disabled]="loading">

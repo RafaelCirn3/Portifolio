@@ -1,11 +1,17 @@
 <aside class="sidebar">
-  <div class="sidebar-logo">
-    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-      <path d="M50 10 L90 80 L10 80 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-      <line x1="50" y1="10" x2="50" y2="80" stroke="currentColor" stroke-width="1"/>
-      <line x1="30" y1="50" x2="70" y2="50" stroke="currentColor" stroke-width="1"/>
-    </svg>
-  </div>
+  <a routerLink="/" class="sidebar-logo" title="Início">
+    <img src="/logo_64.png" 
+         srcset="/logo_16.png 16w, 
+                 /logo_32.png 32w, 
+                 /logo_48.png 48w, 
+                 /logo_64.png 64w, 
+                 /logo_128.png 128w, 
+                 /logo_256.png 256w, 
+                 /logo_512.png 512w" 
+         sizes="50px"
+         alt="Rafael Cirne Logo" 
+         class="sidebar-logo-img">
+  </a>
 
   <nav class="sidebar-nav">
     <a routerLink="/" class="sidebar-link" title="Início">
