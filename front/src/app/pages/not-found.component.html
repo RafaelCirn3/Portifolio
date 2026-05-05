@@ -1,0 +1,19 @@
+<div class="not-found-container">
+  <div class="not-found-content">
+    <h1 class="error-code">404</h1>
+    <h2 class="error-message">Página não encontrada</h2>
+    <p class="error-description">A página que você está procurando não existe ou foi movida.</p>
+    
+    <a routerLink="/" class="back-button">Voltar ao Início</a>
+  </div>
+
+  <div class="decorative-elements">
+    @for (square of decorativeSquares; track square.id) {
+      <div 
+        class="decorative-square"
+        [style.animation-delay]="square.delay + 's'"
+        [style.--duration]="square.duration + 's'"
+      ></div>
+    }
+  </div>
+</div>

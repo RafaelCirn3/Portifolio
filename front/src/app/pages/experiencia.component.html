@@ -1,0 +1,34 @@
+<section class="experiencia-page">
+  <div class="container">
+    <div class="page-header animate-fade-in-up">
+      <h1>Experiência</h1>
+      <div class="header-line"></div>
+      <p class="header-subtitle">Trajetória profissional e projetos relevantes</p>
+    </div>
+
+    <div class="timeline">
+      <div *ngFor="let exp of experiences; let i = index; let odd = odd" class="timeline-item animate-fade-in-up" [style.animation-delay]="(i * 100) + 'ms'" [class.right]="odd">
+        <div class="timeline-marker"></div>
+        <div class="timeline-card">
+          <div class="timeline-header">
+            <h3>{{ exp.title }}</h3>
+            <span class="timeline-company">{{ exp.company }}</span>
+          </div>
+          
+          <span class="timeline-period">{{ exp.period }}</span>
+          
+          <p class="timeline-description">{{ exp.description }}</p>
+          
+          <div class="timeline-achievements">
+            <h4>Destaques</h4>
+            <ul>
+              <li *ngFor="let achievement of exp.achievements">{{ achievement }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-footer></app-footer>
