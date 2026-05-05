@@ -17,57 +17,52 @@ interface Skill {
 export class SkillsComponent {
   skillsData: Skill[] = [
     {
-      category: 'Frontend',
+      category: 'Backend & APIs',
       skills: [
-        { name: 'Angular', level: 95 },
-        { name: 'TypeScript', level: 90 },
-        { name: 'CSS/HTML', level: 90 },
-        { name: 'React', level: 85 }
+        { name: 'Python', level: 90 },
+        { name: 'Django / DRF', level: 90 },
+        { name: 'PHP', level: 80 },
+        { name: 'Laravel', level: 80 }
       ]
     },
     {
-      category: 'Backend',
+      category: 'Dados & Automação',
       skills: [
-        { name: 'Node.js', level: 95 },
-        { name: 'Express', level: 90 },
-        { name: 'Python', level: 85 },
-        { name: 'C#/.NET', level: 80 }
+        { name: 'Pandas', level: 90 },
+        { name: 'OpenPyxl', level: 85 },
+        { name: 'RPA', level: 85 },
+        { name: 'Processamento de dados', level: 90 }
       ]
     },
     {
       category: 'Banco de Dados',
       skills: [
         { name: 'PostgreSQL', level: 90 },
-        { name: 'MongoDB', level: 88 },
-        { name: 'Redis', level: 85 },
-        { name: 'Firebase', level: 80 }
+        { name: 'MySQL', level: 85 },
+        { name: 'MongoDB', level: 80 }
       ]
     },
     {
-      category: 'DevOps & Cloud',
+      category: 'Infraestrutura',
       skills: [
-        { name: 'Docker', level: 90 },
-        { name: 'Kubernetes', level: 85 },
-        { name: 'AWS', level: 85 },
-        { name: 'CI/CD', level: 90 }
+        { name: 'Docker', level: 80 },
+        { name: 'APIs REST', level: 90 },
+        { name: 'Integrações', level: 85 }
       ]
     },
     {
-      category: 'Ferramentas & Padrões',
+      category: 'Frontend (apoio)',
       skills: [
-        { name: 'Git/GitHub', level: 95 },
-        { name: 'Microserviços', level: 90 },
-        { name: 'REST/GraphQL', level: 90 },
-        { name: 'Agile', level: 85 }
+        { name: 'Angular', level: 75 },
+        { name: 'Vue.js', level: 75 }
       ]
     },
     {
-      category: 'Automação & IA',
+      category: 'Metodologias',
       skills: [
-        { name: 'RPA', level: 85 },
-        { name: 'Python Scripting', level: 88 },
-        { name: 'ChatGPT/LLMs', level: 80 },
-        { name: 'Web Scraping', level: 85 }
+        { name: 'SCRUM', level: 85 },
+        { name: 'Liderança técnica', level: 80 },
+        { name: 'Organização de demandas', level: 85 }
       ]
     }
   ];

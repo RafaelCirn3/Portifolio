@@ -21,44 +21,23 @@ export class ProjetosComponent {
   projects: Project[] = [
     {
       id: 1,
-      title: 'Platform Automação',
-      description: 'Plataforma SaaS para automação de workflows com integração em tempo real',
-      technologies: ['Angular', 'Node.js', 'PostgreSQL', 'RabbitMQ'],
+      title: 'Sistema de Monitoramento de Dados Públicos',
+      description: 'Coleta, processamento e organização de dados para geração de insights automatizados.',
+      technologies: ['Python', 'Pandas', 'IA', 'Automação'],
       link: '#'
     },
     {
       id: 2,
-      title: 'Analytics Dashboard',
-      description: 'Dashboard em tempo real para análise de métricas e performance',
-      technologies: ['Angular', 'WebSocket', 'D3.js', 'Express'],
+      title: 'Plataforma SaaS de Gestão',
+      description: 'Sistema web com autenticação, APIs REST e controle de dados estruturados.',
+      technologies: ['Django', 'DRF', 'PostgreSQL', 'APIs'],
       link: '#'
     },
     {
       id: 3,
-      title: 'Microservices API',
-      description: 'Arquitetura de microserviços escalável para processamento de dados',
-      technologies: ['Node.js', 'Docker', 'Kubernetes', 'MongoDB'],
-      link: '#'
-    },
-    {
-      id: 4,
-      title: 'Mobile App',
-      description: 'Aplicativo mobile para gerenciamento de tarefas e projetos',
-      technologies: ['React Native', 'Firebase', 'Redux'],
-      link: '#'
-    },
-    {
-      id: 5,
-      title: 'Admin Portal',
-      description: 'Portal administrativo com controle de acesso e permissões',
-      technologies: ['Angular', 'Express', 'JWT', 'PostgreSQL'],
-      link: '#'
-    },
-    {
-      id: 6,
-      title: 'Integration Engine',
-      description: 'Engine de integração com múltiplas APIs e formatos de dados',
-      technologies: ['Node.js', 'Apache Kafka', 'GraphQL'],
+      title: 'Automação de Processos com RPA',
+      description: 'Scripts e aplicações voltadas à eliminação de tarefas repetitivas e aumento de eficiência.',
+      technologies: ['Python', 'RPA', 'OpenPyxl', 'Automação'],
       link: '#'
     }
   ];

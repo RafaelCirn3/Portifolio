@@ -15,7 +15,7 @@ nav {
   padding: 0 2rem;
 }
 
-.navbar-container {
+.navbar-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -24,7 +24,13 @@ nav {
   margin: 0 auto;
 }
 
-.nav-links {
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--accent);
+}
+
+.navbar-menu {
   display: flex;
   gap: 3rem;
   list-style: none;
@@ -32,7 +38,7 @@ nav {
   padding: 0;
 }
 
-.nav-link {
+.navbar-menu a {
   color: var(--text-primary);
   text-decoration: none;
   font-size: 0.95rem;
@@ -40,7 +46,7 @@ nav {
   transition: color var(--transition-fast);
 }
 
-.nav-link::after {
+.navbar-menu a::after {
   content: '';
   position: absolute;
   bottom: -4px;
@@ -51,22 +57,25 @@ nav {
   transition: width var(--transition-medium);
 }
 
-.nav-link:hover {
+.navbar-menu a:hover {
   color: var(--accent);
 }
 
-.nav-link:hover::after {
+.navbar-menu a:hover::after {
   width: 100%;
 }
 
-.hamburger {
+.menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
   gap: 6px;
+  background: transparent;
+  border: none;
+  padding: 0;
 }
 
-.hamburger span {
+.menu-toggle span {
   width: 25px;
   height: 2px;
   background: var(--text-primary);
@@ -74,15 +83,15 @@ nav {
   transition: all var(--transition-fast);
 }
 
-.hamburger.active span:nth-child(1) {
+.menu-toggle.active span:nth-child(1) {
   transform: rotate(45deg) translateY(10px);
 }
 
-.hamburger.active span:nth-child(2) {
+.menu-toggle.active span:nth-child(2) {
   opacity: 0;
 }
 
-.hamburger.active span:nth-child(3) {
+.menu-toggle.active span:nth-child(3) {
   transform: rotate(-45deg) translateY(-10px);
 }
 
@@ -91,7 +100,7 @@ nav {
     padding: 0 1rem;
   }
 
-  .nav-links {
+  .navbar-menu {
     position: fixed;
     top: 70px;
     left: 0;
@@ -107,21 +116,26 @@ nav {
     z-index: 999;
   }
 
-  .nav-links.active {
+  .navbar-menu.active {
     max-height: 400px;
   }
 
-  .nav-link {
+  .navbar-menu li {
+    width: 100%;
+  }
+
+  .navbar-menu a {
     display: block;
     padding: 1rem;
     border-bottom: 1px solid var(--border-secondary);
+    text-align: center;
   }
 
-  .nav-link::after {
+  .navbar-menu a::after {
     display: none;
   }
 
-  .hamburger {
+  .menu-toggle {
     display: flex;
   }
 }
@@ -132,11 +146,11 @@ nav {
     padding: 0 1rem;
   }
 
-  .nav-links {
+  .navbar-menu {
     top: 60px;
   }
 
-  .nav-link {
+  .navbar-menu a {
     font-size: 0.9rem;
     padding: 0.75rem 1rem;
   }
