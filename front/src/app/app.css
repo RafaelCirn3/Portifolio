@@ -1,18 +1,41 @@
 :host {
   display: block;
   width: 100%;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .app-main {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Garantir que todo o conteúdo use a viewport segura */
+@supports (padding: max(0px)) {
+  :host {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
+
+@media (max-width: 1024px) {
+  .app-main {
+    padding-top: 0;
+  }
 }
 
 @media (max-width: 768px) {
   .app-main {
     margin-left: 0;
+    padding-top: 72px;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-main {
+    padding-top: 64px;
   }
 }
 

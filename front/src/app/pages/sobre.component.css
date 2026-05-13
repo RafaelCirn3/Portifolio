@@ -1,8 +1,9 @@
 .sobre-page {
-  min-height: calc(100vh - 70px);
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  margin-top: 70px;
+  min-height: 100vh;
+  padding: clamp(var(--spacing-lg), 5vh, var(--spacing-2xl)) var(--spacing-lg);
+  margin-top: 0;
   margin-left: 80px;
+  padding-top: clamp(var(--spacing-xl), 8vh, var(--spacing-2xl));
 }
 
 .page-header {
@@ -123,6 +124,10 @@
 
 /* Mobile */
 @media (max-width: 1024px) {
+  .sobre-page {
+    margin-left: 0;
+  }
+
   .sobre-content {
     grid-template-columns: 1fr;
     gap: var(--spacing-xl);
@@ -135,8 +140,9 @@
 
 @media (max-width: 768px) {
   .sobre-page {
-    margin-left: 70px;
+    margin-left: 0;
     padding: var(--spacing-xl) var(--spacing-md);
+    padding-top: max(var(--spacing-xl), calc(72px + var(--spacing-md)));
   }
 
   .page-header h1 {
@@ -158,8 +164,9 @@
 
 @media (max-width: 480px) {
   .sobre-page {
-    margin-left: 60px;
-    padding: var(--spacing-lg) var(--spacing-md);
+    margin-left: 0;
+    padding: var(--spacing-md) var(--spacing-sm);
+    padding-top: max(var(--spacing-md), calc(64px + var(--spacing-md)));
   }
 
   .page-header h1::after {

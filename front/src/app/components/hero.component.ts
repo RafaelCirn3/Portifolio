@@ -13,15 +13,25 @@ export class HeroComponent implements OnInit, OnDestroy {
   mouseX = 0;
   mouseY = 0;
   private animationFrameId: number | null = null;
+  private isMobile = false;
 
   @HostListener('window:mousemove', ['$event'])
   onMouseMove(event: MouseEvent) {
-    this.mouseX = event.clientX;
-    this.mouseY = event.clientY;
+    // Desabilitar parallax em mobile
+    if (!this.isMobile) {
+      this.mouseX = event.clientX;
+      this.mouseY = event.clientY;
+    }
   }
 
   ngOnInit() {
-    this.startParallax();
+    // Detectar se é dispositivo móvel
+    this.isMobile = this.detectMobile();
+    
+    // Iniciar parallax apenas em desktop
+    if (!this.isMobile) {
+      this.startParallax();
+    }
   }
 
   ngOnDestroy() {
@@ -30,14 +40,19 @@ export class HeroComponent implements OnInit, OnDestroy {
     }
   }
 
+  private detectMobile(): boolean {
+    return window.matchMedia('(max-width: 768px)').matches || 
+           /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+  }
+
   private startParallax() {
-    const element = document.querySelector('.hero-grid');
+    const element = document.querySelector('.hero-background');
     if (element) {
       const updateParallax = () => {
         const centerX = window.innerWidth / 2;
         const centerY = window.innerHeight / 2;
-        const offsetX = (this.mouseX - centerX) * 0.02;
-        const offsetY = (this.mouseY - centerY) * 0.02;
+        const offsetX = (this.mouseX - centerX) * 0.01;
+        const offsetY = (this.mouseY - centerY) * 0.01;
         
         (element as HTMLElement).style.transform = `translate(${offsetX}px, ${offsetY}px)`;
         this.animationFrameId = requestAnimationFrame(updateParallax);

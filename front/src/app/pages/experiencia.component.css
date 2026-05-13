@@ -1,8 +1,9 @@
 .experiencia-page {
-  min-height: calc(100vh - 70px);
-  padding: var(--spacing-2xl) var(--spacing-lg);
-  margin-top: 70px;
+  min-height: 100vh;
+  padding: clamp(var(--spacing-lg), 5vh, var(--spacing-2xl)) var(--spacing-lg);
+  margin-top: 0;
   margin-left: 80px;
+  padding-top: clamp(var(--spacing-xl), 8vh, var(--spacing-2xl));
 }
 
 .page-header {
@@ -177,6 +178,10 @@
 
 /* Mobile */
 @media (max-width: 1024px) {
+  .experiencia-page {
+    margin-left: 0;
+  }
+
   .timeline::before {
     display: none;
   }
@@ -198,8 +203,9 @@
 
 @media (max-width: 768px) {
   .experiencia-page {
-    margin-left: 70px;
+    margin-left: 0;
     padding: var(--spacing-xl) var(--spacing-md);
+    padding-top: max(var(--spacing-xl), calc(72px + var(--spacing-md)));
   }
 
   .page-header h1 {
@@ -211,7 +217,7 @@
   }
 
   .timeline {
-    gap: var(--spacing-xl);
+    gap: var(--spacing-lg);
   }
 
   .timeline-card {
@@ -225,8 +231,9 @@
 
 @media (max-width: 480px) {
   .experiencia-page {
-    margin-left: 60px;
-    padding: var(--spacing-lg) var(--spacing-md);
+    margin-left: 0;
+    padding: var(--spacing-md) var(--spacing-sm);
+    padding-top: max(var(--spacing-md), calc(64px + var(--spacing-md)));
   }
 
   .timeline-card {

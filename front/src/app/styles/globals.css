@@ -9,6 +9,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Suporte para viewport-fit=cover e safe-area-inset */
+  viewport-fit: cover;
 }
 
 body {
@@ -18,8 +20,12 @@ body {
   line-height: 1.6;
   letter-spacing: 0.3px;
   overflow-x: hidden;
+  /* Segurança para safe area */
+  padding-left: max(0px, env(safe-area-inset-left));
+  padding-right: max(0px, env(safe-area-inset-right));
+  padding-top: max(0px, env(safe-area-inset-top));
+  padding-bottom: max(0px, env(safe-area-inset-bottom));
 }
-
 
 /* Scrollbar */
 ::-webkit-scrollbar {
@@ -40,26 +46,26 @@ body {
   background: var(--color-accent-hover);
 }
 
-/* Typography */
+/* Typography - Responsiva */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   line-height: 1.2;
 }
 
 h1 {
-  font-size: var(--font-size-4xl);
+  font-size: clamp(1.875rem, 5vw, 4rem);
 }
 
 h2 {
-  font-size: var(--font-size-3xl);
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 h3 {
-  font-size: var(--font-size-2xl);
+  font-size: clamp(1.25rem, 3vw, 2rem);
 }
 
 h4 {
-  font-size: var(--font-size-xl);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
 
 p {
@@ -83,6 +89,9 @@ button {
   border: none;
   cursor: pointer;
   transition: all var(--transition-base);
+  /* Área de toque mínima: 44x44px recomendado */
+  min-height: 44px;
+  min-width: 44px;
 }
 
 button:disabled {
@@ -99,6 +108,10 @@ input, textarea {
   padding: var(--spacing-sm);
   border-radius: 4px;
   transition: all var(--transition-base);
+  /* Zoom prevents no iOS zoom on input focus */
+  font-size: 16px;
+  /* Área de toque mínima */
+  min-height: 44px;
 }
 
 input:focus, textarea:focus {
@@ -128,6 +141,7 @@ ul, ol {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 var(--spacing-lg);
+  width: 100%;
 }
 
 .sr-only {
@@ -151,8 +165,57 @@ ul, ol {
   }
 }
 
-/* Mobile considerations */
+/* ===== BREAKPOINTS ===== */
+
+/* Large Desktop / Ultrawide (1920px and above) */
+@media (min-width: 1920px) {
+  :root {
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.5rem;
+    --spacing-2xl: 5rem;
+  }
+
+  .container {
+    max-width: 1600px;
+  }
+}
+
+/* Desktop (1024px and above) */
+@media (min-width: 1024px) {
+  body {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+/* Tablet (769px to 1023px) */
+@media (max-width: 1023px) {
+  .app-main {
+    padding-top: 72px;
+  }
+
+  h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+  }
+
+  h2 {
+    font-size: clamp(1.25rem, 3.5vw, 2rem);
+  }
+
+  h3 {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+  }
+}
+
+/* Mobile (max 768px) */
 @media (max-width: 768px) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+
   .app-main {
     padding-top: 72px;
   }
@@ -168,20 +231,79 @@ ul, ol {
   }
 
   h1 {
-    font-size: var(--font-size-2xl);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
   }
 
   h2 {
-    font-size: var(--font-size-xl);
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
   }
 
   h3 {
-    font-size: var(--font-size-lg);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+  }
+
+  /* Desabilitar parallax e efeitos pesados em mobile */
+  * {
+    --webkit-touch-callout: none;
   }
 }
 
+/* Small Mobile (max 480px) */
 @media (max-width: 480px) {
+  :root {
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1.25rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 3rem;
+  }
+
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+    padding-top: max(0px, env(safe-area-inset-top));
+    padding-bottom: max(0px, env(safe-area-inset-bottom));
+  }
+
   .app-main {
     padding-top: 64px;
+  }
+
+  .container {
+    padding: 0 var(--spacing-md);
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+  }
+
+  h2 {
+    font-size: clamp(1.125rem, 3vw, 1.5rem);
+  }
+
+  h3 {
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+  }
+
+  h4 {
+    font-size: var(--font-size-base);
+  }
+
+  input, textarea, button {
+    font-size: 16px;
+  }
+}
+
+/* Extra Small Mobile (max 360px) */
+@media (max-width: 360px) {
+  :root {
+    --spacing-xs: 0.375rem;
+    --spacing-sm: 0.5rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.25rem;
+  }
+
+  .container {
+    padding: 0 var(--spacing-sm);
   }
 }
