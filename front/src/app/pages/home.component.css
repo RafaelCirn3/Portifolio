@@ -32,7 +32,7 @@
 .feature-card {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: var(--spacing-xl);
   text-align: center;
   transition: all var(--transition-base);
@@ -57,6 +57,12 @@
   border-color: var(--color-accent);
   background: rgba(229, 9, 20, 0.02);
   transform: translateY(-5px);
+}
+
+@media (hover: none) {
+  .feature-card:hover {
+    transform: none;
+  }
 }
 
 .feature-card:hover::before {
@@ -88,7 +94,7 @@
   }
 
   .features-grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
     gap: var(--spacing-lg);
   }
 
@@ -110,6 +116,7 @@
 
   .feature-card {
     padding: var(--spacing-md);
+    text-align: left;
   }
 
   .feature-icon {

@@ -10,7 +10,7 @@
       <div *ngFor="let project of projects; let i = index" class="project-card animate-fade-in-up" [style.animation-delay]="(i * 50) + 'ms'">
         <div class="project-header">
           <h3>{{ project.title }}</h3>
-          <a href="{{ project.link }}" class="project-link" title="Ver mais">→</a>
+          <a [href]="project.link" target="_blank" rel="noopener" class="project-link" [attr.aria-label]="'Ver detalhes de ' + project.title">→</a>
         </div>
 
         <p class="project-description">{{ project.description }}</p>
@@ -19,7 +19,7 @@
           <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
         </div>
 
-        <a href="{{ project.link }}" class="project-button">Ver Projeto</a>
+        <a [href]="project.link" target="_blank" rel="noopener" class="project-button">Ver projeto</a>
       </div>
     </div>
   </div>

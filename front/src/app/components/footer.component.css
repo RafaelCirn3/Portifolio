@@ -43,6 +43,9 @@
   color: var(--color-text-secondary);
   font-size: var(--font-size-sm);
   transition: color var(--transition-fast);
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
 }
 
 .footer-section a:hover {
@@ -87,7 +90,7 @@
   }
 
   .footer-content {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
     gap: var(--spacing-lg);
   }
 }

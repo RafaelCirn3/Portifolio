@@ -100,7 +100,7 @@
 .timeline-card {
   background: var(--color-bg-secondary);
   border: 1px solid var(--color-border);
-  border-radius: 8px;
+  border-radius: var(--radius-md);
   padding: var(--spacing-xl);
   transition: all var(--transition-base);
 }
@@ -109,6 +109,12 @@
   border-color: var(--color-accent);
   transform: translateY(-5px);
   box-shadow: 0 15px 40px rgba(229, 9, 20, 0.15);
+}
+
+@media (hover: none) {
+  .timeline-card:hover {
+    transform: none;
+  }
 }
 
 .timeline-header {

@@ -24,21 +24,21 @@ export class ProjetosComponent {
       title: 'Sistema de Monitoramento de Dados Públicos',
       description: 'Coleta, processamento e organização de dados para geração de insights automatizados.',
       technologies: ['Python', 'Pandas', 'IA', 'Automação'],
-      link: '#'
+      link: 'https://github.com/RafaelCirn3'
     },
     {
       id: 2,
       title: 'Plataforma SaaS de Gestão',
       description: 'Sistema web com autenticação, APIs REST e controle de dados estruturados.',
       technologies: ['Django', 'DRF', 'PostgreSQL', 'APIs'],
-      link: '#'
+      link: 'https://github.com/RafaelCirn3'
     },
     {
       id: 3,
       title: 'Automação de Processos com RPA',
       description: 'Scripts e aplicações voltadas à eliminação de tarefas repetitivas e aumento de eficiência.',
       technologies: ['Python', 'RPA', 'OpenPyxl', 'Automação'],
-      link: '#'
+      link: 'https://github.com/RafaelCirn3'
     }
   ];
 }

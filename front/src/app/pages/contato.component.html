@@ -10,19 +10,19 @@
     <div class="contato-content">
       <div class="contato-info animate-slide-in-left">
         <div class="info-card">
-          <div class="info-icon">✉</div>
+          <div class="info-icon" aria-hidden="true">✉</div>
           <h3>Email</h3>
           <a href="mailto:cirnerafael06@gmail.com">cirnerafael06@gmail.com</a>
         </div>
 
         <div class="info-card">
-          <div class="info-icon">📱</div>
+          <div class="info-icon" aria-hidden="true">📱</div>
           <h3>Telefone</h3>
           <a href="tel:+5583991441464">+55 (83) 99144-1464</a>
         </div>
 
         <div class="info-card">
-          <div class="info-icon">📍</div>
+          <div class="info-icon" aria-hidden="true">📍</div>
           <h3>Localização</h3>
           <p>João Pessoa, PB - Brasil</p>
         </div>
@@ -53,11 +53,11 @@
             name="message" required></textarea>
         </div>
 
-        <button type="submit" class="submit-btn" [disabled]="loading">
+        <button type="submit" class="submit-btn" [disabled]="loading" [attr.aria-busy]="loading">
           {{ loading ? 'Enviando...' : 'Enviar Mensagem' }}
         </button>
 
-        <div *ngIf="submitted" class="success-message animate-fade-in">
+        <div *ngIf="submitted" class="success-message animate-fade-in" role="status" aria-live="polite">
           ✓ Mensagem enviada com sucesso! Entrarei em contato em breve.
         </div>
       </form>
