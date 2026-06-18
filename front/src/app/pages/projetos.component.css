@@ -100,10 +100,16 @@
 }
 
 .project-link {
-  font-size: var(--font-size-lg);
+  font-size: var(--font-size-xs);
   color: var(--color-accent);
   transition: all var(--transition-fast);
   flex-shrink: 0;
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
 .project-link:hover {

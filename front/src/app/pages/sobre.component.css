@@ -80,11 +80,14 @@
 }
 
 .focus-list li::before {
-  content: '▸';
+  content: '';
   position: absolute;
   left: 0;
+  top: 0.75em;
+  width: 8px;
+  height: 2px;
+  background: var(--color-accent);
   color: var(--color-accent);
-  font-weight: bold;
 }
 
 .sobre-stats {

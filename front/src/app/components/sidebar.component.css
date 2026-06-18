@@ -64,7 +64,9 @@
   border-radius: 8px;
   background: transparent;
   color: var(--color-text-secondary);
-  font-size: 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
   transition: all var(--transition-base);
   border: 1px solid transparent;
   position: relative;
@@ -142,7 +144,7 @@
   .sidebar-link {
     height: 45px;
     min-height: 45px;
-    font-size: 1.3rem;
+    font-size: 0.7rem;
   }
 
   .social-link {

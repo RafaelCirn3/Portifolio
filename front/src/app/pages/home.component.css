@@ -70,9 +70,19 @@
 }
 
 .feature-icon {
-  font-size: 3rem;
+  width: 56px;
+  height: 56px;
   margin-bottom: var(--spacing-md);
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 59, 69, 0.35);
+  border-radius: var(--radius-md);
+  background: var(--color-accent-soft);
+  color: var(--color-accent);
+  font-size: var(--font-size-xs);
+  font-weight: 800;
+  letter-spacing: 0.08em;
 }
 
 .feature-card h3 {
@@ -120,7 +130,8 @@
   }
 
   .feature-icon {
-    font-size: 2.5rem;
+    width: 48px;
+    height: 48px;
   }
 }
 
@@ -135,7 +146,8 @@
   }
 
   .feature-icon {
-    font-size: 2rem;
+    width: 44px;
+    height: 44px;
   }
 
   .feature-card h3 {

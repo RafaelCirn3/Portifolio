@@ -10,7 +10,7 @@
       <div *ngFor="let project of projects; let i = index" class="project-card animate-fade-in-up" [style.animation-delay]="(i * 50) + 'ms'">
         <div class="project-header">
           <h3>{{ project.title }}</h3>
-          <a [href]="project.link" target="_blank" rel="noopener" class="project-link" [attr.aria-label]="'Ver detalhes de ' + project.title">→</a>
+          <a [href]="project.link" target="_blank" rel="noopener" class="project-link" [attr.aria-label]="'Ver detalhes de ' + project.title">Abrir</a>
         </div>
 
         <p class="project-description">{{ project.description }}</p>
