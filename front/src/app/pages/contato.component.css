@@ -68,8 +68,8 @@
 }
 
 .info-icon {
-  width: 56px;
-  height: 40px;
+  width: 48px;
+  height: 48px;
   margin-bottom: var(--spacing-md);
   display: inline-flex;
   align-items: center;
@@ -78,9 +78,16 @@
   border-radius: var(--radius-sm);
   background: var(--color-accent-soft);
   color: var(--color-accent);
-  font-size: var(--font-size-xs);
-  font-weight: 800;
-  letter-spacing: 0.08em;
+}
+
+.info-icon svg {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .info-card h3 {
