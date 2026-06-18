@@ -1,6 +1,7 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { I18nService } from '../services/i18n.service';
 
 @Component({
   selector: 'app-navbar',
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  readonly i18n = inject(I18nService);
   isMenuOpen = false;
   isScrolled = false;
 

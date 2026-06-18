@@ -1,15 +1,15 @@
-<a routerLink="/" class="headerbar-logo" (click)="closeMenu()" aria-label="Ir para a página inicial">
+<a routerLink="/" class="headerbar-logo" (click)="closeMenu()" [attr.aria-label]="i18n.t('logoHomePageLabel')">
   <img src="/rafael_logo_512.png" width="42" height="42" alt="Rafael Cirne" class="logo-image">
 </a>
 
 <header class="headerbar" [class.scrolled]="isScrolled">
   <div class="headerbar-content">
-    <nav class="headerbar-menu" aria-label="Navegação principal">
-      <a routerLink="/sobre">Sobre</a>
-      <a routerLink="/projetos">Projetos</a>
-      <a routerLink="/skills">Skills</a>
-      <a routerLink="/experiencia">Experiência</a>
-      <a routerLink="/contato">Contato</a>
+    <nav class="headerbar-menu" [attr.aria-label]="i18n.t('navMainLabel')">
+      <a routerLink="/sobre">{{ i18n.t('navAbout') }}</a>
+      <a routerLink="/projetos">{{ i18n.t('navProjects') }}</a>
+      <a routerLink="/skills">{{ i18n.t('navSkills') }}</a>
+      <a routerLink="/experiencia">{{ i18n.t('navExperience') }}</a>
+      <a routerLink="/contato">{{ i18n.t('navContact') }}</a>
     </nav>
   </div>
 </header>

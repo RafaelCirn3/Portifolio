@@ -1,16 +1,16 @@
 <section class="projetos-page">
   <div class="container">
     <div class="page-header animate-fade-in-up">
-      <h1>Projetos</h1>
+      <h1>{{ i18n.t('projectsTitle') }}</h1>
       <div class="header-line"></div>
-      <p class="header-subtitle">Soluções desenvolvidas com foco em automação, dados e sistemas escaláveis.</p>
+      <p class="header-subtitle">{{ i18n.t('projectsSubtitle') }}</p>
     </div>
 
     <div class="projects-grid">
-      <div *ngFor="let project of projects; let i = index" class="project-card animate-fade-in-up" [style.animation-delay]="(i * 50) + 'ms'">
+      <div *ngFor="let project of i18n.projects; let i = index" class="project-card animate-fade-in-up" [style.animation-delay]="(i * 50) + 'ms'">
         <div class="project-header">
           <h3>{{ project.title }}</h3>
-          <a [href]="project.link" target="_blank" rel="noopener" class="project-link" [attr.aria-label]="'Ver detalhes de ' + project.title">Abrir</a>
+          <a [href]="project.link" target="_blank" rel="noopener" class="project-link" [attr.aria-label]="i18n.t('projectAria') + ' ' + project.title">{{ i18n.t('projectOpen') }}</a>
         </div>
 
         <p class="project-description">{{ project.description }}</p>
@@ -19,7 +19,7 @@
           <span *ngFor="let tech of project.technologies" class="tech-tag">{{ tech }}</span>
         </div>
 
-        <a [href]="project.link" target="_blank" rel="noopener" class="project-button">Ver projeto</a>
+        <a [href]="project.link" target="_blank" rel="noopener" class="project-button">{{ i18n.t('projectButton') }}</a>
       </div>
     </div>
   </div>

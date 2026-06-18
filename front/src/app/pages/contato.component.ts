@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { FooterComponent } from '../components/footer.component';
+import { I18nService } from '../services/i18n.service';
 
 @Component({
   selector: 'app-contato',
@@ -11,6 +12,8 @@ import { FooterComponent } from '../components/footer.component';
   styleUrls: ['./contato.component.css']
 })
 export class ContatoComponent {
+  readonly i18n = inject(I18nService);
+
   formData = {
     name: '',
     email: '',

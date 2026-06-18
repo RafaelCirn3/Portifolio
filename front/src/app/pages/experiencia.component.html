@@ -1,13 +1,13 @@
 <section class="experiencia-page">
   <div class="container">
     <div class="page-header animate-fade-in-up">
-      <h1>Experiência</h1>
+      <h1>{{ i18n.t('experienceTitle') }}</h1>
       <div class="header-line"></div>
-      <p class="header-subtitle">Trajetória profissional e projetos relevantes</p>
+      <p class="header-subtitle">{{ i18n.t('experienceSubtitle') }}</p>
     </div>
 
     <div class="timeline">
-      <div *ngFor="let exp of experiences; let i = index; let odd = odd" class="timeline-item animate-fade-in-up" [style.animation-delay]="(i * 100) + 'ms'" [class.right]="odd">
+      <div *ngFor="let exp of i18n.experiences; let i = index; let odd = odd" class="timeline-item animate-fade-in-up" [style.animation-delay]="(i * 100) + 'ms'" [class.right]="odd">
         <div class="timeline-marker"></div>
         <div class="timeline-card">
           <div class="timeline-header">
@@ -20,7 +20,7 @@
           <p class="timeline-description">{{ exp.description }}</p>
           
           <div class="timeline-achievements">
-            <h4>Destaques</h4>
+            <h4>{{ i18n.t('highlights') }}</h4>
             <ul>
               <li *ngFor="let achievement of exp.achievements">{{ achievement }}</li>
             </ul>

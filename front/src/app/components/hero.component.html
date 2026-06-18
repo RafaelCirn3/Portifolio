@@ -4,25 +4,23 @@
   <div class="hero-content">
     <div class="hero-text animate-fade-in-up">
 
-      <h2 class="hero-subtitle">Engenharia Back-End • Automação • Dados • IA</h2>
+      <h2 class="hero-subtitle">{{ i18n.t('heroSubtitle') }}</h2>
       <h1 class="hero-title">Rafael<br>Cirne</h1>
       <div class="hero-divider-text">
-        <span>Transformo processos complexos em sistemas eficientes, automatizados e escaláveis.</span>
+        <span>{{ i18n.t('heroDivider') }}</span>
         <div class="divider-line"></div>
       </div>
       <p class="hero-description">
-        Bacharelando em Ciência da Computação, atuo no desenvolvimento de aplicações orientadas a dados,
-        automação de processos e construção de soluções SaaS, com foco em reduzir esforço operacional e
-        aumentar previsibilidade em sistemas reais.
+        {{ i18n.t('heroDescription') }}
       </p>
     </div>
 
     <div class="hero-actions animate-fade-in-up" style="animation-delay: 100ms;">
       <a routerLink="/projetos" class="btn btn-primary">
-        Ver Projetos
+        {{ i18n.t('heroProjects') }}
       </a>
       <a routerLink="/contato" class="btn btn-secondary">
-        Entrar em Contato
+        {{ i18n.t('heroContact') }}
       </a>
     </div>
   </div>
@@ -36,7 +34,7 @@
       <div class="stat-icon">&lt;/&gt;</div>
       <div class="stat-info">
         <h4>15+</h4>
-        <span>Projetos<br>Concluídos</span>
+        <span [innerHTML]="i18n.t('statProjects')"></span>
       </div>
     </div>
     <div class="stat-item">
@@ -50,7 +48,7 @@
       </div>
       <div class="stat-info">
         <h4>3+</h4>
-        <span>Anos de<br>Experiência</span>
+        <span [innerHTML]="i18n.t('statExperience')"></span>
       </div>
     </div>
     <div class="stat-item">
@@ -66,7 +64,7 @@
       </div>
       <div class="stat-info">
         <h4>10+</h4>
-        <span>Tecnologias<br>Dominadas</span>
+        <span [innerHTML]="i18n.t('statTechnologies')"></span>
       </div>
     </div>
     <div class="stat-item">
@@ -80,7 +78,7 @@
       </div>
       <div class="stat-info">
         <h4>100%</h4>
-        <span>Focado em<br>Resultados</span>
+        <span [innerHTML]="i18n.t('statFocus')"></span>
       </div>
     </div>
   </div>

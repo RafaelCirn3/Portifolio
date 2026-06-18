@@ -1,13 +1,13 @@
 <section class="skills-page">
   <div class="container">
     <div class="page-header animate-fade-in-up">
-      <h1>Skills</h1>
+      <h1>{{ i18n.t('skillsTitle') }}</h1>
       <div class="header-line"></div>
-      <p class="header-subtitle">Tecnologias e ferramentas utilizadas no desenvolvimento de sistemas e automações.</p>
+      <p class="header-subtitle">{{ i18n.t('skillsSubtitle') }}</p>
     </div>
 
     <div class="skills-grid">
-      <div *ngFor="let skillGroup of skillsData; let i = index" class="skill-category animate-fade-in-up" [style.animation-delay]="(i * 80) + 'ms'">
+      <div *ngFor="let skillGroup of i18n.skills; let i = index" class="skill-category animate-fade-in-up" [style.animation-delay]="(i * 80) + 'ms'">
         <h3>{{ skillGroup.category }}</h3>
         
         <div class="skills-list">

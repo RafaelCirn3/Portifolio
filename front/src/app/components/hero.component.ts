@@ -1,6 +1,7 @@
-import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { I18nService } from '../services/i18n.service';
 
 @Component({
   selector: 'app-hero',
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent implements OnInit, OnDestroy {
+  readonly i18n = inject(I18nService);
   mouseX = 0;
   mouseY = 0;
   private animationFrameId: number | null = null;
