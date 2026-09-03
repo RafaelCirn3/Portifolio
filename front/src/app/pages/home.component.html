@@ -1,47 +1,132 @@
 <app-hero></app-hero>
 
-<section class="features">
-  <div class="container">
-    <div class="features-grid">
-      <div class="feature-card animate-fade-in-up">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false">
-            <path d="M8 8L4 12L8 16"></path>
-            <path d="M16 8L20 12L16 16"></path>
-            <path d="M14 5L10 19"></path>
-          </svg>
-        </div>
-        <h3>{{ i18n.t('featureEngineeringTitle') }}</h3>
-        <p>{{ i18n.t('featureEngineeringText') }}</p>
-      </div>
-
-      <div class="feature-card animate-fade-in-up" style="animation-delay: 100ms;">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false">
-            <path d="M4 7H11"></path>
-            <path d="M13 7H20"></path>
-            <path d="M7 17H20"></path>
-            <path d="M4 17H5"></path>
-            <circle cx="12" cy="7" r="2"></circle>
-            <circle cx="6" cy="17" r="2"></circle>
-          </svg>
-        </div>
-        <h3>{{ i18n.t('featureAutomationTitle') }}</h3>
-        <p>{{ i18n.t('featureAutomationText') }}</p>
-      </div>
-
-      <div class="feature-card animate-fade-in-up" style="animation-delay: 200ms;">
-        <div class="feature-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24" focusable="false">
-            <path d="M12 3L20 7.5L12 12L4 7.5L12 3Z"></path>
-            <path d="M4 12L12 16.5L20 12"></path>
-            <path d="M4 16.5L12 21L20 16.5"></path>
-          </svg>
-        </div>
-        <h3>{{ i18n.t('featureSaasTitle') }}</h3>
-        <p>{{ i18n.t('featureSaasText') }}</p>
-      </div>
+<section class="home-section services-section">
+  <div class="container-wide">
+    <div class="section-heading">
+      <span>O que eu faço</span>
+      <h2>Serviços que impulsionam seu negócio</h2>
+      <p>Minha atuação combina engenharia de software, automação, inteligência artificial e infraestrutura para entregar soluções completas — da arquitetura ao deploy.</p>
     </div>
+
+    <div class="services-grid">
+      <article class="service-card">
+        <div class="service-icon">&lt;/&gt;</div>
+        <h3>Desenvolvimento de Sistemas</h3>
+        <p>Aplicações web, APIs REST, painéis administrativos e sistemas internos com foco em segurança, performance e escalabilidade.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">⚙</div>
+        <h3>Automação de Processos</h3>
+        <p>RPA, workflows, integrações e processamento de dados para reduzir tarefas manuais, retrabalho e esforço operacional.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">AI</div>
+        <h3>IA & Integrações Inteligentes</h3>
+        <p>LLMs, agentes, MCP, RAG e APIs de IA aplicados a fluxos reais, com foco em contexto, segurança e eficiência.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">SaaS</div>
+        <h3>Produtos SaaS</h3>
+        <p>Arquitetura e desenvolvimento de produtos digitais com autenticação, assinaturas, integrações, observabilidade e evolução contínua.</p>
+      </article>
+      <article class="service-card">
+        <div class="service-icon">☁</div>
+        <h3>Cloud & Deploy</h3>
+        <p>Docker, AWS, Vercel, Nginx, bancos de dados, Cloudflare e pipelines de entrega para colocar aplicações em produção com confiabilidade.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-section projects-section">
+  <div class="container-wide">
+    <div class="section-heading row-heading">
+      <div>
+        <span>Projetos em destaque</span>
+        <h2>Soluções reais para problemas reais</h2>
+        <p>Cases que mostram como combino produto, engenharia e contexto de negócio.</p>
+      </div>
+      <a routerLink="/projetos" class="text-link">Ver todos os projetos →</a>
+    </div>
+
+    <div class="projects-grid">
+      <article class="project-card">
+        <div class="project-topline"><span>SaaS</span><span>Licitações</span></div>
+        <h3>Radar de Compras Públicas</h3>
+        <p>Plataforma SaaS que monitora licitações com filtros personalizados, automação de busca, assinaturas e infraestrutura em produção.</p>
+        <div class="tags"><span>Django</span><span>Angular</span><span>PostgreSQL</span><span>AWS</span></div>
+        <a routerLink="/projetos">Ver case completo →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-topline"><span>Sistema Web</span><span>Imobiliário</span></div>
+        <h3>Asterix Consultoria Imobiliária</h3>
+        <p>Plataforma full stack para gestão e exposição de imóveis, com painel administrativo, integrações, MCP e ambiente containerizado.</p>
+        <div class="tags"><span>Angular</span><span>FastAPI</span><span>PostgreSQL</span><span>Docker</span></div>
+        <a routerLink="/projetos">Ver case completo →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-topline"><span>IA + MCP</span><span>Jurídico</span></div>
+        <h3>Automação Jurídica com IA</h3>
+        <p>Integração de IA via MCP para apoiar fluxos jurídicos, padronização documental e acesso estruturado a dados do sistema existente.</p>
+        <div class="tags"><span>Python</span><span>MCP</span><span>LLMs</span><span>Integrações</span></div>
+        <a routerLink="/projetos">Ver case completo →</a>
+      </article>
+
+      <article class="project-card">
+        <div class="project-topline"><span>Catálogo técnico</span><span>B2B</span></div>
+        <h3>RQ Soluções</h3>
+        <p>Estrutura técnico-comercial orientada à geração de oportunidades, combinando presença digital, catálogo e estratégia de aquisição.</p>
+        <div class="tags"><span>Web</span><span>SEO</span><span>Cloud</span><span>Performance</span></div>
+        <a routerLink="/projetos">Ver case completo →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="home-section experience-section">
+  <div class="container-wide split-grid">
+    <div class="section-heading compact-heading">
+      <span>Experiência aplicada</span>
+      <h2>Mais do que stack: decisões técnicas, produto e operação</h2>
+      <p>Minha experiência recente envolve construir soluções completas e assumir decisões que atravessam backend, frontend, automação, infraestrutura e contexto de negócio.</p>
+      <a routerLink="/experiencia" class="text-link">Ver trajetória completa →</a>
+    </div>
+
+    <div class="experience-list">
+      <div class="experience-item"><strong>Backend & APIs</strong><span>Python, Django/DRF, FastAPI, arquitetura REST e regras de negócio.</span></div>
+      <div class="experience-item"><strong>Automação</strong><span>Playwright, Selenium, processamento de dados, integrações e workflows operacionais.</span></div>
+      <div class="experience-item"><strong>IA aplicada</strong><span>MCP, agentes, LLM APIs, RAG, guardrails e avaliação de respostas.</span></div>
+      <div class="experience-item"><strong>Infraestrutura</strong><span>Docker, AWS EC2, Vercel, Nginx, Cloudflare e bancos SQL/NoSQL.</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section stack-section">
+  <div class="container-wide">
+    <div class="section-heading row-heading">
+      <div>
+        <span>Tecnologias</span>
+        <h2>Stack e ferramentas</h2>
+      </div>
+      <a routerLink="/skills" class="text-link">Ver todas as tecnologias →</a>
+    </div>
+
+    <div class="stack-list">
+      <span>Python</span><span>Django</span><span>DRF</span><span>FastAPI</span><span>Angular</span><span>TypeScript</span><span>JavaScript</span><span>PostgreSQL</span><span>MySQL</span><span>MongoDB</span><span>Docker</span><span>AWS</span><span>Vercel</span><span>Git</span><span>Linux</span><span>Nginx</span><span>Redis</span><span>Celery</span><span>Cloudflare</span>
+    </div>
+  </div>
+</section>
+
+<section class="home-section cta-section">
+  <div class="container-wide cta-box">
+    <div>
+      <span>Próximo passo</span>
+      <h2>Vamos construir algo que resolva um problema real?</h2>
+      <p>Estou disponível para projetos, parcerias e oportunidades em desenvolvimento de software, automação e soluções com IA.</p>
+    </div>
+    <a routerLink="/contato" class="cta-button">Falar comigo →</a>
   </div>
 </section>
 
