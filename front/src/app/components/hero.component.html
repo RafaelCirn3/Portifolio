@@ -1,85 +1,50 @@
 <section class="hero">
   <div class="hero-background"></div>
 
-  <div class="hero-content">
-    <div class="hero-text animate-fade-in-up">
-
-      <h2 class="hero-subtitle">{{ i18n.t('heroSubtitle') }}</h2>
-      <h1 class="hero-title">Rafael<br>Cirne</h1>
-      <div class="hero-divider-text">
-        <span>{{ i18n.t('heroDivider') }}</span>
-        <div class="divider-line"></div>
-      </div>
+  <div class="hero-shell">
+    <div class="hero-copy animate-fade-in-up">
+      <span class="eyebrow">Engenharia de Software • Automação • IA • Dados</span>
+      <h1>
+        Soluções digitais inteligentes que
+        <span>geram resultados.</span>
+      </h1>
       <p class="hero-description">
-        {{ i18n.t('heroDescription') }}
+        Desenvolvo sistemas, automações e integrações com IA de ponta a ponta para transformar processos complexos em soluções escaláveis, eficientes e orientadas a negócio.
       </p>
+
+      <div class="hero-pill-row" aria-label="Áreas de atuação">
+        <span>Desenvolvimento Full Stack</span>
+        <span>Automação de Processos</span>
+        <span>IA & Integrações</span>
+        <span>Produtos SaaS</span>
+      </div>
+
+      <div class="hero-actions">
+        <a routerLink="/projetos" class="btn btn-primary">Ver projetos <span aria-hidden="true">→</span></a>
+        <a routerLink="/contato" class="btn btn-secondary">Falar comigo</a>
+      </div>
     </div>
 
-    <div class="hero-actions animate-fade-in-up" style="animation-delay: 100ms;">
-      <a routerLink="/projetos" class="btn btn-primary">
-        {{ i18n.t('heroProjects') }}
-      </a>
-      <a routerLink="/contato" class="btn btn-secondary">
-        {{ i18n.t('heroContact') }}
-      </a>
-    </div>
+    <aside class="hero-panel animate-fade-in-up" style="animation-delay: 100ms;" aria-label="Resumo técnico">
+      <div class="panel-status"><span></span> engenharia aplicada a negócio</div>
+      <div class="code-block" aria-hidden="true">
+        <span class="code-keyword">def</span> solucionar(problema):<br>
+        &nbsp;&nbsp;entender_negocio()<br>
+        &nbsp;&nbsp;projetar_arquitetura()<br>
+        &nbsp;&nbsp;desenvolver()<br>
+        &nbsp;&nbsp;integrar_ia()<br>
+        &nbsp;&nbsp;automatizar_processos()<br>
+        &nbsp;&nbsp;entregar_resultados()<br>
+        &nbsp;&nbsp;<span class="code-keyword">return</span> sucesso
+      </div>
+      <div class="panel-note">Código é ferramenta. Resultado é o objetivo.</div>
+    </aside>
   </div>
 
-  <div class="hero-scroll">
-    <div class="scroll-indicator"></div>
-  </div>
-
-  <div class="hero-stats animate-fade-in-up" style="animation-delay: 200ms;">
-    <div class="stat-item">
-      <div class="stat-icon">&lt;/&gt;</div>
-      <div class="stat-info">
-        <h4>15+</h4>
-        <span [innerHTML]="i18n.t('statProjects')"></span>
-      </div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-          <polyline points="2 12 12 17 22 12"></polyline>
-          <polyline points="2 17 12 22 22 17"></polyline>
-        </svg>
-      </div>
-      <div class="stat-info">
-        <h4>3+</h4>
-        <span [innerHTML]="i18n.t('statExperience')"></span>
-      </div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <path
-            d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
-          </path>
-          <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-          <line x1="12" y1="22.08" x2="12" y2="12"></line>
-        </svg>
-      </div>
-      <div class="stat-info">
-        <h4>10+</h4>
-        <span [innerHTML]="i18n.t('statTechnologies')"></span>
-      </div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-          stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"></circle>
-          <circle cx="12" cy="12" r="6"></circle>
-          <circle cx="12" cy="12" r="2"></circle>
-        </svg>
-      </div>
-      <div class="stat-info">
-        <h4>100%</h4>
-        <span [innerHTML]="i18n.t('statFocus')"></span>
-      </div>
-    </div>
+  <div class="hero-stats animate-fade-in-up" style="animation-delay: 180ms;">
+    <div class="stat-item"><strong>15+</strong><span>projetos entregues</span></div>
+    <div class="stat-item"><strong>3+</strong><span>anos de experiência</span></div>
+    <div class="stat-item"><strong>Produção</strong><span>deploys em AWS e Vercel</span></div>
+    <div class="stat-item"><strong>Impacto</strong><span>tecnologia com propósito</span></div>
   </div>
 </section>
