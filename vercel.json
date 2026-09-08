@@ -2,6 +2,9 @@
   "buildCommand": "ng build",
   "outputDirectory": "dist/front/browser",
   "routes": [
-    { "src": "/(.*)", "dest": "/index.html" }
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
   ]
 }
